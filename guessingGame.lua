@@ -1,6 +1,6 @@
 print("Welcome to the High Low Guessing Game")
 local ranNum = math.random(0,100)
-print(ranNum)
+-- print(ranNum)
 local count = 1
 
 --[[
@@ -27,19 +27,19 @@ while true do
   end
 
   local numOff = numOffBy(ranNum, guess)
-    if numOff > 10 then
+    if numOff > 10 then -- If the guess is really high 
       print("Your guess is very high ")
       count = count + 1
-    elseif numOff > 0 then
+    elseif numOff > 0 then -- If the guess is a little high
       print("Your guess is a little high")
       count = count + 1
-    elseif numOff < -10 then
+    elseif numOff < -10 then -- If the guess is really low
       print("Your guess is very low ")
       count = count + 1
-    elseif numOff < 0 then
+    elseif numOff < 0 then -- If the guess is a little low
       print("Your Guess is little low")
       count = count + 1
-    elseif numOff == 0 then
+    elseif numOff == 0 then -- If the guess is correct
       print("You Guessed the number! It was: " .. ranNum)
       break
     end
